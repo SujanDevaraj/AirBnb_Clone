@@ -156,6 +156,7 @@ line-height: 150%; /* 24px */
     display: flex;
     flex-direction: column;
     gap:40px;
+    width: fit-content;
 
 }
 #next-trip>h2{
