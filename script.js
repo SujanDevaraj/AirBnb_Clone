@@ -1,34 +1,63 @@
-const searchTxt = document.getElementById("search");
-const searchBox = document.getElementById("search-bar");
-const searchBtn = document.getElementById("search-btn");
-const form = document.getElementById("search-bar");
+const nav_options = document.getElementsByClassName("underline");
+const getaway_options = document.querySelectorAll(".getaway-options>div");
+const destination = document.getElementById("location");
+const checkIn = document.getElementById("check-in");
+const checkOut = document.getElementById("check-out");
+const guests = document.getElementById("guests");
 
 
-searchBox.addEventListener("mouseover", function () {
-    searchTxt.innerText = "Search"
-    searchBtn.classList.add("new-search");
-});
+function highlightOption(idx){
+    getaway_options[idx].style.textDecoration="underline";
+   
+    
+}
+function unhighlightOption(idx){
+    getaway_options[idx].style.textDecoration="none";
+    
+}
 
-searchBox.addEventListener("mouseleave", function () {
-    searchTxt.innerText = ""
-    searchBtn.classList.remove("new-search");
-});
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const searchPlace = {
-        place: e.target.place.value,
-        checkIn: e.target.checkIn.value,
-        checkOut: e.target.checkOut.value,
-        guests: e.target.guests.value,
+function showUnderline(idx){
+    nav_options[idx].style.width="25px"
+
+}
+function removeUnderline(idx){
+    nav_options[idx].style.width="0px"
+
+}
+
+
+// validating input values
+function valid(){
+    const val1 = destination.value ;
+    const val2 = checkIn.value;
+    const val3 = checkOut.value;
+    const val4 = guests.value;
+    
+   
+    if(val1=="" || val2=="" || val3=="" || val4==""){
+        alert("kindly fill all details!");
+        return false;
     }
-    console.log(searchPlace);
-    form.reset();
-    console.log(searchPlace);
-    localStorage.setItem("searchObject", JSON.stringify(searchPlace));
-    navigateTosearchListing();
-});
+    const checkInDate = new Date(val2);
+    const checkOutDate = new Date(val3);
+    const today = new Date();
 
-function navigateTosearchListing() {
-    window.location.href = "searchListing.html";
+    if(checkInDate>=checkOutDate || checkInDate<today){
+        alert("kindly fill dates properly!");
+        return false; 
+    }
+    return true;
+}
+
+// function to navigate to page-2
+function gotoNextPage(){
+   if(!valid())return;
+   localStorage.removeItem("idx");
+   localStorage.setItem("destination",destination.value);
+   localStorage.setItem("checkIn",checkIn.value);
+   localStorage.setItem("checkOut",checkOut.value);
+   localStorage.setItem("guests",guests.value);
+    window.location.href="./properties.html";
+
 }

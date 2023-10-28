@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter&family=Mada&family=Montserrat&family=Poppins&family=Roboto&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+nav{
+    color: white;
+    padding: 10px 0px;
+}
+.user{
+    background-color: white;
+    border-radius: 10px;
+}
+.nav-options>div{
+    padding-inline: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+}
+.user-profile>div{
+    padding-inline: 5px;
+    cursor: pointer;
+}
+.underline{
+    width:0px;
+    height: 2px;
+    background-color: white;
+    border-radius: 5px;
+    margin: -13px 30px;
+    transition: width linear 0.25s;
+    
+}
+.logo{
+    cursor: pointer;
+}
+.search-bar{
+    width: 55vw;
+    margin: 10px auto;
+    background-color:white;
+    border-radius: 50px;
+    height: 55px;
+}
+.search-bar>div>input{
+    border:none;
+    outline: none;
+    font-size: 14px;
+}
+.search-bar>div>label{
+    
+    font-size: 14px;
+}
+.search-bar>div>button{
+    
+    text-align: center;
+    padding: 10px 12px;
+    background-color:rgb(222,49,81);
+    border-radius: 55%;
+    margin: 5px;
+    border: none;
+}
+.hero-section{
+    text-align: center;
+    padding-bottom:100px;
+    padding-top: 30px;
+}
+main{
+    background-color: white;
+}
+.card{
+    width: 15rem;
+    height: 20rem;
+    color: white;
+}
+.card>div>p{
+    font-size: 12px;
+}
+.inspirations > h4,.experiences>h4{
+    font-size: 30px;
+    font-weight: 500;
+    padding: 20px 0px;
+}
+.experiences>div>img{
+    width: 46vw;
+}
+.gift-picker{
+    width: 25vw;
+}
+.gift-picker>h4{
+    font-size: 40px;
+    font-weight: 600;
+}
+.gift-picker>button{
+    width: 8rem;
+    outline: none;
+}
+.hosting{
+    text-align: center;
+}
+
+.hosting>img{
+    width: 95vw;
+}
+
+.all-getaways{
+    width:95vw;
+}
+.col{
+    padding: 10px 0px;
+    font-size: 13px;
+}
+.getaway-options>div>p{
+    cursor: pointer;
+    transition: all linear 0.15s;
+}
+.getaway-options>div>p:hover{
+    scale: 110%;
+}
+.line{
+    width: 80vw;
+    margin-inline:auto;
+    height: 1px;
+    background-color: rgb(221, 213, 213);
+}
+.copyrights{
+    font-size: 14px;
+}
+.connect>div{
+    padding-inline: 10px;
+    cursor: pointer;
+}

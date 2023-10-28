@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>all-stays-available</title>
+
+    <link rel="stylesheet" href="properties.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="d-flex justify-content-around align-items-center mt-2 mb-4">
+      <div class="logo">
+        <img src="./assets/pink-logo.svg" alt="logo.svg" />
+      </div>
+      <div
+        class="destination-details d-flex justify-content-between align-items-center"
+      >
+        <p id="destination">Bordeaux</p>
+        <div class="line"></div>
+        <p id="dates">Feb 19-26</p>
+        <div class="line"></div>
+        <p id="totalGuests">5 Guests</p>
+        <div>
+          <button type="button">
+            <img src="./assets/search.svg" alt="searchbutton.svg" />
+          </button>
+        </div>
+      </div>
+      <div class="user-profile d-flex mt-2 align-items-center">
+        <div><span class="pt-2">Become a Host</span></div>
+        <div><img src="./assets/black_globe.svg" alt="globe.svg" /></div>
+        <div class="user d-flex justify-content-around">
+          <img src="./assets/menu.svg" alt="" />
+          <img src="./assets/user-profile.svg" alt="" />
+        </div>
+      </div>
+    </nav>
+    <div class="options d-flex justify-content-between flex-wrap">
+      <div>Price ⇓</div>
+      <div>Type of place ⇓</div>
+      <div>Free cancellation</div>
+      <div>Wifi</div>
+      <div>Kitchen</div>
+      <div>Air conditioning</div>
+      <div>Washer</div>
+      <div>Iron</div>
+      <div>Free parking</div>
+      <div>Dryer</div>
+      <div><img src="./assets/filter.svg" alt="" /> Filters</div>
+    </div>
+
+    <main class="d-flex my-3">
+      <div class="all-properties d-flex flex-column"></div>
+      <div id="map"></div>
+    </main>
+    <div class="d-flex model">
+      <div></div>
+      <div class="d-flex flex-column cost-details"></div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="properties.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqa6Cs5i81dGvGxd1ycgaNea8M0l6QamE&callback=initMap"></script>
+  </body>
+</html>
